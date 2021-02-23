@@ -1,5 +1,5 @@
 # YOLOv3 in PyTorch
-A quite minimal implementation of YOLOv3 in PyTorch spanning only around 600 lines of code with support for training and evaluation and complete with helper functions for inference. There is currently pretrained weights for Pascal-VOC with MS COCO coming up. With minimal changes in the model with regards to the output format the original weights can also be loaded seamlessly.  
+A quite minimal implementation of YOLOv3 in PyTorch spanning only around 800 lines of code (not including plot functions etc.) with support for training and evaluation and complete with helper functions for inference. There is currently pretrained weights for Pascal-VOC with MS COCO coming up. With minimal changes in the model with regards to the output format the original weights can also be loaded seamlessly.  
 
 ## Installation
 
@@ -21,12 +21,19 @@ Download the processed dataset from the following link: coming soon
 
 The file structure of the dataset is a folder with images, a folder with corresponding text files containing the bounding boxes and class targets for each image and two csv-files containing the subsets of the data used for training and testing. 
 
-### Training
-Edit the config file to match the setup you want to use. Run the training file. 
+### Download Pascal VOC dataset
+Download the preprocessed dataset from [link](https://www.kaggle.com/aladdinpersson/pascal-voc-yolo-works-with-albumentations). Just unzip this in the main directory.
 
-### 
-## Result
-78.1 MAP on Pascal VOC 2007 test set with confidence threshold 0.2 and iou threshold 0.45 in non max suppression. 
+### Training
+Edit the config.py file to match the setup you want to use. Then run train.py
+
+### Results
+| Model                   | mAP @ 50 IoU |
+| ----------------------- |:-----------------:|
+| YOLOv3 (Pascal VOC) 	  | 78.2              |
+| YOLOv3 (MS-COCO)        | Not done yet      |
+
+The model was evaluated with confidence 0.2 and IOU threshold 0.45 using NMS.
 
 ## YOLOv3 paper 
 The implementation is based on the following paper:
