@@ -10,19 +10,17 @@ $ cd YOLOv3-PyTorch
 $ pip install requirements.txt
 ```
 ### Download pretrained weights on Pascal-VOC
-Pretrained weights for Pascal-VOC can be found downloaded from this page: https://www.kaggle.com/sannapersson/yolov3-weights-for-pascal-voc-with-781-map
+Pretrained weights for Pascal-VOC can be downloaded from this page: https://www.kaggle.com/sannapersson/yolov3-weights-for-pascal-voc-with-781-map
 
 ### Dowload original weights 
 Download YOLOv3 weights from https://pjreddie.com/media/files/yolov3.weights. Save the weights to PyTorch format by running the model_with_weights.py file.
 Change line in train.py to import model_with_weights.py instead of model.py since the original output format is slightly different. 
 
-### Download Pascal-VOC dataset
-Download the processed dataset from the following link: coming soon 
-
-The file structure of the dataset is a folder with images, a folder with corresponding text files containing the bounding boxes and class targets for each image and two csv-files containing the subsets of the data used for training and testing. 
-
 ### Download Pascal VOC dataset
 Download the preprocessed dataset from [link](https://www.kaggle.com/aladdinpersson/pascal-voc-yolo-works-with-albumentations). Just unzip this in the main directory.
+The file structure of the dataset is a folder with images, a folder with corresponding text files containing the bounding boxes and class targets for each image and two csv-files containing the subsets of the data used for training and testing. 
+
+
 
 ### Training
 Edit the config.py file to match the setup you want to use. Then run train.py
